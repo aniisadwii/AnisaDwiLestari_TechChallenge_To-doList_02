@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- judul halaman -->
+    <title>To Do List</title>
+    <!-- menyambungkan fie css -->
+    <link rel="stylesheet" href="toDoList.css" />
+    <!-- preload google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- kotak utama untuk semua elemen -->
+    <div class="container">
+      <!-- bagian header -->
+      <div class="header">
+        <!-- font judul dibuat lebih besar -->
+        <h1>Todo Application</h1>
+        <p>Hi there, welcome back, its time to complete your tasks.</p>
+      </div>
+      <!-- kotak input task dan tombolnya -->
+      <div class="input-container">
+        <!-- kolom buat nulis task, kasih id biar gampang diambil datanya -->
+        <input id="task-input" type="text" placeholder="Enter your task here" />
+        <!-- tombol '+' buat nambah task, kasih id biar bisa diklik di JS -->
+        <button id="add-task-btn">+</button>
+      </div>
+      <!-- daftar task bakal ditaro di sini, kasih id biar JS bisa masukin data -->
+      <ul id="task-list" class="task-list"></ul>
+    </div>
+    <!-- ambil jQuery dari CDN biar bisa pake fitur-fiturnya di JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- sambungin file JS utama, pake module biar bisa import/export -->
+    <script type="module" src="toDoList.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+/* bikin body jadi ke tengah biar rapi, tinggi full layar, pake font Inter, warna abu muda */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #eeeef0;
+}
+
+/* kotak putih buat isi semua elemen, padding 20px, sudut bulat, bayangan tipis, lebar 400px max 90% */
+.container {
+  background-color: #ffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+/* judul header besar 24px, hitam, jarak bawah 10px */
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* teks kecil 14px, abu, jarak bawah 20px */
+.header p {
+  font-size: 14px;
+  color: #7b7b7b;
+  margin-bottom: 20px;
+}
+
+/* kotak utk input + tombol, flex sejajar, jarak atas 20px */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* kolom input, lebar penuh, padding 10px, garis abu, sudut bulat, jarak kanan 10px, teks 14px, ga ada outline */
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* tombol nambah task, ungu, teks putih, sudut bulat, padding 10px, kursor tangan */
+.input-container button {
+  background-color: #5016ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+/* daftar task */
+#task-list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+/* kotak daftar task, abu muda, ga ada bullet, padding 10px, sudut bulat, bayangan tipis, jarak atas 20px */
+.task-list {
+  align-items: center;
+  background-color: #eeeef0;
+  list-style: none;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* kotak tiap item task, flex sejajar, spasi antar elemen, padding 10px, putih, garis abu, sudut bulat, jarak bawah 10px */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffff;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+}
+
+/* checkbox tiap task, kotak 20px, garis abu, sudut kecil, kursor tangan, animasi halus, ungu kalo dicentang, ikon centang pake gambar */
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dedede;
+  border-radius: 3px;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* checkbox pas dicentang */
+.task-item input[type="checkbox"]:checked {
+  background-color: #5016ff;
+  border-color: #dedede;
+}
+
+/* icon check pas dicentang */
+.task-item input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/check.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* teks task ngisi ruang sisa */
+.task-item span {
+  flex: 1;
+}
+
+/* ikon hapus 18px, kursor tangan */
+.task-item img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* ikon delete 20px, agak buram, jadi jelas kalo dihover (kalo dipake) */
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* ikon delete pas dihover */
+.delete-icon:hover {
+  opacity: 1;
+}
